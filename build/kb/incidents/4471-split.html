@@ -3,22 +3,22 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link href="../../_app/immutable/entry/start.CdaL5CWS.js" rel="modulepreload">
+    <link href="../../_app/immutable/entry/start.BgrU957-.js" rel="modulepreload">
 		<link href="../../_app/immutable/chunks/DnoyNMba.js" rel="modulepreload">
-		<link href="../../_app/immutable/chunks/CJrmvEOT.js" rel="modulepreload">
+		<link href="../../_app/immutable/chunks/AzLGbZ30.js" rel="modulepreload">
 		<link href="../../_app/immutable/chunks/DXhvxdpI.js" rel="modulepreload">
-		<link href="../../_app/immutable/entry/app.DKUKY7Zu.js" rel="modulepreload">
+		<link href="../../_app/immutable/entry/app.CAbk-fMa.js" rel="modulepreload">
 		<link href="../../_app/immutable/chunks/4HIIzLmj.js" rel="modulepreload">
 		<link href="../../_app/immutable/chunks/B4WlwwdY.js" rel="modulepreload">
 		<link href="../../_app/immutable/chunks/CGyox8To.js" rel="modulepreload">
 		<link href="../../_app/immutable/chunks/gCpT5-Oq.js" rel="modulepreload">
 		<link href="../../_app/immutable/nodes/0.BIUIeQ3I.js" rel="modulepreload">
 		<link href="../../_app/immutable/chunks/BHsyMl1J.js" rel="modulepreload">
-		<link href="../../_app/immutable/nodes/5.8AcsZX3w.js" rel="modulepreload">
-		<link href="../../_app/immutable/chunks/B17DVgil.js" rel="modulepreload">
+		<link href="../../_app/immutable/nodes/5.9a6d4U_0.js" rel="modulepreload">
+		<link href="../../_app/immutable/chunks/EdxzjQoD.js" rel="modulepreload">
 		<link href="../../_app/immutable/chunks/BMg7KjJ0.js" rel="modulepreload">
-		<link href="../../_app/immutable/chunks/DR7RVcJr.js" rel="modulepreload">
-		<link href="../../_app/immutable/chunks/BsPnvk72.js" rel="modulepreload">
+		<link href="../../_app/immutable/chunks/CM1GeokC.js" rel="modulepreload">
+		<link href="../../_app/immutable/chunks/mKG6KCYs.js" rel="modulepreload">
 		<!--e2jw2j--><!----><title>#4471 · what the merged reports show · support kb</title>
 		<link href="../../_app/immutable/assets/runbook.BhhgOc_n.css" rel="stylesheet">
 		<link href="../../_app/immutable/assets/Callout.yLErXQDM.css" rel="stylesheet">
@@ -29,32 +29,35 @@
     <div style="display: contents"><!--[--><!--[0--><!--[--><!--[--><div class="kb svelte-e2jw2j"><header><a class="crumb svelte-e2jw2j" href="/kb">support desk · kb</a> <h1 class="svelte-e2jw2j">#4471 · what the merged reports show</h1> <p class="meta svelte-e2jw2j"><span>owner <b>Ti Li</b></span> <span class="status open svelte-e2jw2j">open</span> <span class="svelte-e2jw2j">reviewed 2026-10-29 · 0 days ago</span></p></header> <!--[-1--><!--]--> <main><p><a href="/kb/incidents/4471">#4471</a> says one issue, one fix queued. Read report by report, it is more than
 one problem. The reports were merged on subject line alone
 (<a href="/kb/decisions/0001-dedupe-by-subject">decision 0001</a>), and every one of them says “wrong date”,
-so nothing kept them apart.</p> <aside class="warn svelte-17bri61"><!---->The queued parser fix closes only the <code>parser</code> row. The other problems need their own
-tickets and their own fixes, and each one has a ticket now.<!----></aside><!----> <h2>The problems</h2> <p class="sum svelte-1op6c6"><strong>412</strong> reports merged into #4471 · <strong>3</strong> problems</p> <table><thead><tr><th>problem</th><th>reports</th><th>tenants</th><th>seen</th><th>ticket</th></tr></thead><tbody><!--[--><tr><td><code>parser</code></td><td>374</td><td>11</td><td>2026-04-01 → 2026-10-04</td><td><!--[0--><a href="https://github.com/tl-easygo/mega-s01e03/issues/1">tl-easygo/mega-s01e03#1</a><!--]--></td></tr><tr><td><code>hint</code></td><td>33</td><td>3</td><td>2026-04-17 → 2026-09-22</td><td><!--[0--><a href="https://github.com/tl-easygo/mega-s01e03/issues/2">tl-easygo/mega-s01e03#2</a><!--]--></td></tr><tr><td><code>shift</code></td><td>5</td><td>5</td><td>2026-04-02 → 2026-10-04</td><td><!--[0--><a href="https://github.com/tl-easygo/mega-s01e03/issues/3">tl-easygo/mega-s01e03#3</a><!--]--></td></tr><!--]--></tbody></table><!----> <ul><li><strong><code>parser</code></strong>: the shared parser reads every date month first, and these tenants write the day
-first, so day and month swap (2 March becomes 3 February). Any channel except a booking-v3 form.</li> <li><strong><code>hint</code></strong>: tenants on booking-v3 get a form that prints <code>MM/DD/YYYY</code> under the date field, but
+so nothing kept them apart.</p> <aside class="warn svelte-17bri61"><!---->Engineering closed #4471 on 5 October. The parser fix (<code>fix(dates): parse dd/mm for eu
+locales</code>) closes only the <code>parser</code> row. <code>hint</code> is won't fix: the
+booking-v3 form is retired. <code>shift</code> is not fixed by either and stays open.<!----></aside><!----> <h2>The problems</h2> <p class="sum svelte-1op6c6"><strong>412</strong> reports merged into #4471 · <strong>3</strong> problems</p> <table><thead><tr><th>problem</th><th>reports</th><th>tenants</th><th>seen</th><th>ticket</th></tr></thead><tbody><!--[--><tr><td><code>parser</code></td><td>379</td><td>11</td><td>2026-04-01 → 2026-10-04</td><td><!--[0--><a href="https://github.com/tl-easygo/mega-s01e03/issues/1">tl-easygo/mega-s01e03#1</a><!--]--></td></tr><tr><td><code>hint</code></td><td>33</td><td>3</td><td>2026-04-17 → 2026-09-22</td><td><!--[0--><a href="https://github.com/tl-easygo/mega-s01e03/issues/2">tl-easygo/mega-s01e03#2</a><!--]--></td></tr><tr><td><code>shift</code></td><td>5</td><td>5</td><td>2026-04-02 → 2026-10-04</td><td><!--[0--><a href="https://github.com/tl-easygo/mega-s01e03/issues/3">tl-easygo/mega-s01e03#3</a><!--]--></td></tr><!--]--></tbody></table><!----> <ul><li><strong><code>parser</code></strong>: the shared parser reads every date month first, and these tenants write the day
+first, so day and month swap (2 March becomes 3 February). Any channel except a booking-v3 form.
+Fixed on 5 October.</li> <li><strong><code>hint</code></strong>: tenants on booking-v3 get a form that prints <code>MM/DD/YYYY</code> under the date field, but
 the form reads the date the tenant’s way, day first. People type what the hint says and the
-date swaps. Only through the form, only on booking-v3. Fixing the parser does not fix this:
-the fix is the hint.</li> <li><strong><code>shift</code></strong>: the date moves by one day, not by a swap (Tuesday 12 May shows as Monday 11 May;
+date swaps. Only through the form, only on booking-v3. Fixing the parser does not fix this.
+Won’t fix: booking-v3 is retired, so no new reports can come in this way.</li> <li><strong><code>shift</code></strong>: the date moves by one day, not by a swap (Tuesday 12 May shows as Monday 11 May;
 one meeting is Tuesday in Lisbon and Monday in Toronto; an invite arrives before the booking).
 That follows the reader’s timezone, not the tenant’s date order. The desk read these
 (<a href="https://github.com/tl-easygo/mega-s01e03/blob/main/src/lib/data/desk-notes.json" rel="nofollow">desk notes</a>)
 but filed them under <code>parser</code> by tenant.</li></ul> <h2>How the table counts</h2> <ul><li>One report per id: the ticket export repeats some reports across pages.</li> <li><code>parser</code> or <code>hint</code> comes from the tenant’s locale and booking form (<code>causes.ts</code>), not from
 intake’s tag. Intake guesses from the reporter’s browser and disagrees with the tenant on a
-share of these reports.</li> <li>A report the desk read as a one-day move counts as <code>shift</code>, wherever its tenant would put it.</li></ul> <h2>The same reports by cause</h2> <p>For comparison: the desk’s own split, which folds <code>shift</code> into <code>parser</code>.</p> <p class="sum svelte-12oyimm"><strong>412</strong> reports merged into #4471 · <strong>2</strong> causes</p> <table><thead><tr><th>cause</th><th>reports</th><th>tagged as</th><th>tenants</th><th>seen</th><th></th></tr></thead><tbody><!--[--><tr class="svelte-12oyimm"><td class="svelte-12oyimm"><code>parser</code></td><td class="svelte-12oyimm">379</td><td class="tags svelte-12oyimm">parser ×356 · hint ×23</td><td class="svelte-12oyimm">11</td><td class="svelte-12oyimm">2026-04-01 → 2026-10-04</td><td class="svelte-12oyimm">#4471</td></tr><tr class="svelte-12oyimm wrong"><td class="svelte-12oyimm"><code>hint</code></td><td class="svelte-12oyimm">33</td><td class="tags svelte-12oyimm">hint ×18 · parser ×15</td><td class="svelte-12oyimm">3</td><td class="svelte-12oyimm">2026-04-17 → 2026-09-22</td><td class="svelte-12oyimm">not this ticket — no ticket of its own</td></tr><!--]--></tbody></table> <!--[--><!--[0--><p class="note svelte-12oyimm">5 reports read as a one-day move; filed under <code>parser</code> by tenant.</p><!--]--><!--[-1--><!--]--><!--]--><!----> <h2>For triage</h2> <p>Matching on subject merges different bugs when every report uses the same words. A date report
+share of these reports.</li> <li>A report the desk read as a one-day move counts as <code>shift</code>, and stays counted under the cause
+its tenant puts it in, as the desk counts. So the rows add up to more than the ticket.</li></ul> <h2>The same reports by cause</h2> <p>For comparison: the desk’s own split, which has no row for <code>shift</code>.</p> <p class="sum svelte-12oyimm"><strong>412</strong> reports merged into #4471 · <strong>2</strong> causes</p> <table><thead><tr><th>cause</th><th>reports</th><th>tagged as</th><th>tenants</th><th>seen</th><th></th></tr></thead><tbody><!--[--><tr class="svelte-12oyimm"><td class="svelte-12oyimm"><code>parser</code></td><td class="svelte-12oyimm">379</td><td class="tags svelte-12oyimm">parser ×356 · hint ×23</td><td class="svelte-12oyimm">11</td><td class="svelte-12oyimm">2026-04-01 → 2026-10-04</td><td class="svelte-12oyimm">#4471</td></tr><tr class="svelte-12oyimm wrong"><td class="svelte-12oyimm"><code>hint</code></td><td class="svelte-12oyimm">33</td><td class="tags svelte-12oyimm">hint ×18 · parser ×15</td><td class="svelte-12oyimm">3</td><td class="svelte-12oyimm">2026-04-17 → 2026-09-22</td><td class="svelte-12oyimm">not this ticket — no ticket of its own</td></tr><!--]--></tbody></table> <!--[--><!--[0--><p class="note svelte-12oyimm">5 reports read as a one-day move; filed under <code>parser</code> by tenant.</p><!--]--><!--[-1--><!--]--><!--]--><!----> <h2>For triage</h2> <p>Matching on subject merges different bugs when every report uses the same words. A date report
 needs two more questions before it is merged: does day swap with month, or move by one day? And
 did it come through a booking form?</p> <!--[0--><p class="stamp svelte-1280m42">desk ref <b class="svelte-1280m42">DR-A8QA-9M8X</b></p><!--]--><!----><!----></main> <footer class="svelte-e2jw2j">Pages are written by people. Tables and charts are built from data at render time.</footer></div><!--]--><!----><!--]--><!--]--> <!--[-1--><!--]--><!--]-->
 			
 			<script>
 				{
-					__sveltekit_169a29g = {
+					__sveltekit_190w5m9 = {
 						base: new URL("../..", location).pathname.slice(0, -1)
 					};
 
 					const element = document.currentScript.parentElement;
 
 					Promise.all([
-						import("../../_app/immutable/entry/start.CdaL5CWS.js"),
-						import("../../_app/immutable/entry/app.DKUKY7Zu.js")
+						import("../../_app/immutable/entry/start.BgrU957-.js"),
+						import("../../_app/immutable/entry/app.CAbk-fMa.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element, {
 							node_ids: [0, 5],

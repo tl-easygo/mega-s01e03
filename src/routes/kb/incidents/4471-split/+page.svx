@@ -23,8 +23,9 @@ one problem. The reports were merged on subject line alone
 so nothing kept them apart.
 
 <Callout kind="warn">
-The queued parser fix closes only the <code>parser</code> row. The other problems need their own
-tickets and their own fixes, and each one has a ticket now.
+Engineering closed #4471 on 5 October. The parser fix (<code>fix(dates): parse dd/mm for eu
+locales</code>) closes only the <code>parser</code> row. <code>hint</code> is won't fix: the
+booking-v3 form is retired. <code>shift</code> is not fixed by either and stays open.
 </Callout>
 
 ## The problems
@@ -33,10 +34,11 @@ tickets and their own fixes, and each one has a ticket now.
 
 - **`parser`**: the shared parser reads every date month first, and these tenants write the day
   first, so day and month swap (2 March becomes 3 February). Any channel except a booking-v3 form.
+  Fixed on 5 October.
 - **`hint`**: tenants on booking-v3 get a form that prints `MM/DD/YYYY` under the date field, but
   the form reads the date the tenant's way, day first. People type what the hint says and the
-  date swaps. Only through the form, only on booking-v3. Fixing the parser does not fix this:
-  the fix is the hint.
+  date swaps. Only through the form, only on booking-v3. Fixing the parser does not fix this.
+  Won't fix: booking-v3 is retired, so no new reports can come in this way.
 - **`shift`**: the date moves by one day, not by a swap (Tuesday 12 May shows as Monday 11 May;
   one meeting is Tuesday in Lisbon and Monday in Toronto; an invite arrives before the booking).
   That follows the reader's timezone, not the tenant's date order. The desk read these
@@ -49,11 +51,12 @@ tickets and their own fixes, and each one has a ticket now.
 - `parser` or `hint` comes from the tenant's locale and booking form (`causes.ts`), not from
   intake's tag. Intake guesses from the reporter's browser and disagrees with the tenant on a
   share of these reports.
-- A report the desk read as a one-day move counts as `shift`, wherever its tenant would put it.
+- A report the desk read as a one-day move counts as `shift`, and stays counted under the cause
+  its tenant puts it in, as the desk counts. So the rows add up to more than the ticket.
 
 ## The same reports by cause
 
-For comparison: the desk's own split, which folds `shift` into `parser`.
+For comparison: the desk's own split, which has no row for `shift`.
 
 <CauseTable ticket={4471} />
 
