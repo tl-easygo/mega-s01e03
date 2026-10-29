@@ -4,7 +4,7 @@ title: '#4471 · what the merged reports show'
 owner: Ti Li
 status: open
 reviewed: 2026-10-29
-signature: Ti Li
+signature: 'v1.eyJzdWIiOiIyNDI2IiwiYXVkIjoiY2hhbGxlbmdlOndoYXQtaXQtc2hvd3MiLCJpYXQiOjE3OTMyNjAyMjcsImV4cCI6MTc5MzM0NjYyN30.VcHC2NkZpyaCSqA6HFMkh6PNR8hSVDkwXQ8dnCRv7aY'
 ---
 
 <script>
